@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header_style.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="header.js"></script>
+    <title>Header</title>
+</head>
+
+<body>
+    <div class="logo1">
+        <span class="logo">
+            <ion-icon name="pulse"></ion-icon>
+        </span>
+    </div>
+    <div class="search-anim">
+        <!-- search-anim class is used for scroll reveal tarnsition (transition not working on search class) -->
+        <div class="search">
+            <span class="icon">
+                <ion-icon name="search"></ion-icon>
+            </span>
+            <div class="input">
+                <input type="text" placeholder="Search" id="text1">
+                <span class="clear" onclick="ClearFields1();">
+                    <ion-icon name="musical-note"></ion-icon>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <ul>
+            <li>
+                <span class="icon">
+                    <ion-icon name="home"></ion-icon>
+                </span>
+                <span class="title">HOME</span>
+            </li>
+            <li>
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <span class="title">PROFILE</span>
+            </li>
+            <li>
+                <span class="icon">
+                    <ion-icon name="paper-plane"></ion-icon>
+                </span>
+                <span class="title">CONTACT US</span>
+            </li>
+            <li>
+                <span class="icon">
+                    <ion-icon name="settings"></ion-icon>
+                </span>
+                <span class="title">SETTINGS</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active');
+        }
+    </script>
+    <script>
+        ScrollReveal().reveal(".logo1", {
+            duration: 2500,
+            distance: "60px",
+            origin: "left",
+        });
+        ScrollReveal().reveal(".search-anim", {
+            duration: 2500,
+            distance: "60px",
+            origin: "left",
+        });
+        ScrollReveal().reveal(".header", {
+            duration: 2500,
+            distance: "60px",
+            origin: "right",
+        });
+    </script>
+</body>
+
+</html>

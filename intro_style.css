@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    color: white;
+    font-weight: 800;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./headphone.jpg);
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    position:absolute;
+}
+.navigation{
+    height: 20%;
+    width: 100%;
+    display:flex;
+    position:absolute;
+    justify-content: space-between;
+}
+
+.img-bar{
+    display:flex;
+    align-items: center;
+    margin-left:2em;
+    float: left;
+    transition:0.5s;
+    overflow: hidden;
+    animation: animate 2s linear forwards;
+    font-family: 'Signika Negative', sans-serif;
+}
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    30% {
+        width: 35px;
+        height: 0px;
+    }
+    60% {
+        width: 65px;
+        height: 60px;
+    }
+    100% {
+        width: 210px;
+        height: 120px;
+    }
+}
+.a{
+    color:#E03B8B;
+    display: inline-block;
+    position:relative;
+}
+.wave{
+    height:4em;
+    width:4em;
+    cursor:pointer;
+}
+
+.options{
+    display:flex;
+    margin-right:6%;
+    margin-top:40px;
+    float:right;
+    font-family: "Roboto";  
+}
+.options ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    color: #5f5f5f;
+    margin: 10px;
+}
+.options ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #5f5f5f;
+    transition:0.5s;
+}
+.options ul li a:hover{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.content{
+    position: absolute;
+    height:80%;
+    width:100%;
+    top:20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-col{
+    display:flex;
+    margin-left:7%;
+    line-height:110px;
+    font-size:45px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.right-col{
+    float: right;
+    margin-right:6%;
+    margin-top: 30px;
+    display: flex ;
+    align-items: center;
+}
+
+.icon{
+    background-image: url(./button.gif);
+    opacity:0.75;
+    height:18em;
+    width:18em;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px gray;
+}

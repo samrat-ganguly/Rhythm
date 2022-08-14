@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.hydrated{
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+body{
+    display:flex;
+    align-items: center;
+    position:relative;
+    height:8vh;
+    background:linear-gradient(45deg, whitesmoke,#bbe2df,white);
+    padding:10px 30px 10px 50px;
+    justify-content: space-between;
+    gap:90px;
+    margin:0;
+}
+.logo{
+    display:flex;
+    position: relative;
+    width:40px;
+    height:40px;
+    border-radius: 60px;
+    background: none;
+    
+    justify-content: left;
+    align-items: center;
+    cursor:pointer;
+    transition:0.5s;
+    overflow: hidden;
+}
+
+.logo ion-icon{ /*for the search-icon*/
+    font-size: 35px;
+    color:#E03B8B;
+    position:relative;
+    top:0;
+    left:8px;
+    animation-name:beat;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    background: none;
+}
+@keyframes beat{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.6);
+    }
+}
+
+/*search bar*/
+.search{
+    display:flex;
+    position: relative;
+    width:40px;
+    height:40px;
+    border-radius: 60px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    justify-content: left;
+    align-items: center;
+    cursor:pointer;
+    transition:0.5s;/* when making the search button inactive*/
+    overflow: hidden;
+    
+}
+
+.search-anim{/*search-anim class for left scroll effect*/
+    margin-right:auto;
+}
+
+.search ion-icon{ /*for the search-icon*/
+    font-size: 25px;
+    color:#fdc6c3;
+    position:relative;
+    top:4px;
+    left:8px;
+}
+
+.search.active{ /*after pressing the search icon*/
+    width:400px;
+    transition:0.5s;
+}
+
+.search .input{/*for the input-box to search*/
+    position:relative;
+    width:300px;
+    height:40px;
+    left:20px;
+    display:flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+.search .input input{/*writing area*/
+    position:absolute;
+    top:0;
+    height:40px;
+    width:100%;
+    border: none;
+    outline:none;
+    
+}
+
+.clear ion-icon{/*for the clear icon(which is the musical icon)*/
+    font-size: 20px;
+    color:grey;
+    position:relative;
+    left:170px;
+}
+/*search bar*/
+
+/*Options on the right-side*/
+ul{
+    display: flex;
+    position:relative;
+    gap:25px;
+    cursor: pointer;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width:40px;
+    height:40px;
+    background:white;
+    border-radius: 60px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+}
+ul li:hover{
+    width:110px;
+    background:linear-gradient(45deg,#fdc6c3,#df9395);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+ul li::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius: 60px;
+    background:linear-gradient(45deg,#fdc6c3,#df9395);
+    filter: blur(15px);
+    z-index: -1;
+    opacity:0;
+}
+ul li:hover::after{
+    opacity:0.5;
+}
+
+ul li ion-icon{
+    color:#fdc6c3;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+    border-radius: 50%;
+}
+
+ul li:hover ion-icon{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+ul li span{
+    position:absolute;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li .title{
+    color:#fff;
+    transition: 0.5s;
+    transition-delay: 0s;
+    transform:scale(0);
+    font-weight: 900;
+    font-size:13px;
+}
+
+ul li:hover .title{
+    transform:scale(1);
+    transition-delay: 0.25s;
+}
+/*Options on the right-side*/
